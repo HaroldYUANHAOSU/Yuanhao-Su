@@ -1,23 +1,21 @@
-
 <!DOCTYPE html>
-
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Yuanhao Su - 个人简历</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yuanhao Su - 个人简历</title>
+  <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
     body {
       font-family: "Microsoft YaHei", sans-serif;
-      background: #f4f7fa;
-      color: #333;
+      background: linear-gradient(to bottom, #f4f7fa, #eaf4ff);
+      color: #2d3436;
     }
     header {
-      background: url('background.jpg') center/cover no-repeat;
-      padding: 100px 20px 60px;
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      padding: 120px 20px 70px;
       color: white;
       text-align: center;
       position: relative;
@@ -40,7 +38,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 10px 0;
+      padding: 12px 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       z-index: 1000;
     }
@@ -48,48 +46,59 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      padding: 6px 12px;
+      border-radius: 5px;
     }
     nav a:hover {
-      color: #3498db;
+      color: #fff;
+      background: linear-gradient(120deg, #6c5ce7, #a29bfe);
+      box-shadow: 0 2px 8px rgba(108, 92, 231, 0.5);
     }
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
       animation: fadeIn 0.6s ease;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      border-left: 6px solid #a29bfe;
+      padding-left: 20px;
+      background: linear-gradient(135deg, #ffffff, #f0f4ff);
+      border-radius: 8px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
     .section-title {
       font-size: 1.8em;
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
+      color: #4b4bff;
+      margin-bottom: 20px;
       padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-    .content {
-      margin-left: 10px;
-    }
-    .item {
-      margin-bottom: 20px;
+      border-bottom: 3px solid;
+      border-image: linear-gradient(to right, #6c5ce7, #a29bfe) 1;
+      text-shadow: 1px 1px 3px rgba(100, 100, 255, 0.2);
     }
     .item-title {
       display: flex;
       justify-content: space-between;
       font-weight: bold;
       color: #2c3e50;
+      margin-bottom: 5px;
     }
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-      font-weight: bold;
+    .publication-item {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .publication-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #6c5ce7;
     }
     .skills-grid {
       display: grid;
@@ -100,21 +109,36 @@
       background: #f9f9f9;
       padding: 15px;
       border-radius: 6px;
+      transition: 0.3s ease;
     }
-    ul {
-      padding-left: 20px;
+    .skill-category:hover {
+      background: linear-gradient(to right, #74b9ff, #a29bfe);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .publication-item {
-      margin-bottom: 15px;
-      padding-left: 20px;
-      position: relative;
+    #pdf-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: linear-gradient(45deg, #6c5ce7, #00cec9);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      animation: glowing 1.5s infinite alternate;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    .publication-item::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #3498db;
+    #pdf-button:hover {
+      background: linear-gradient(45deg, #5e54d8, #00bfa6);
     }
+    @keyframes glowing {
+      0% { box-shadow: 0 0 5px #6c5ce7; }
+      100% { box-shadow: 0 0 20px #00cec9; }
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -129,101 +153,73 @@
     }
 
     @media print {
-      nav, header { display: none; }
-      .container {
-        margin: 0;
-        box-shadow: none;
-        background: white;
-      }
+      #pdf-button, nav, header { display: none; }
     }
   </style>
 </head>
 <body>
 <header>
-<h1>Yuanhao Su</h1>
-<p>📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
+  <h1>Yuanhao Su</h1>
+  <p>📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
 </header>
+
 <nav>
-<a href="#edu">教育</a>
-<a href="#interest">兴趣</a>
-<a href="#pub">论文</a>
-<a href="#conf">会议</a>
-<a href="#exp">经历</a>
-<a href="#skills">技能</a>
+  <a href="#edu">教育</a>
+  <a href="#interest">兴趣</a>
+  <a href="#pub">论文</a>
+  <a href="#conf">会议</a>
+  <a href="#exp">经历</a>
+  <a href="#skills">技能</a>
 </nav>
-<div class="container" style="max-width: 1100px; padding: 60px; background-color: rgba(255, 255, 255, 0.9); border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
-<div class="section" id="edu">
-<h2 class="section-title">教育背景</h2>
-<div class="content">
-<div class="item">
-<div class="item-title">
-<span>Fuzhou University</span>
-<span>Fuzhou, China</span>
+
+<div class="container">
+  <div class="section" id="edu">
+    <h2 class="section-title">教育背景</h2>
+    <div class="item">
+      <div class="item-title"><span>Fuzhou University</span><span>Fuzhou, China</span></div>
+      <div>PhD in Data Science (2025 - 2028)</div>
+    </div>
+  </div>
+
+  <div class="section" id="interest">
+    <h2 class="section-title">研究兴趣</h2>
+    <div class="item">Vision & Sensors in Urban Parks</div>
+    <div class="item">Environmental Justice via GIS & ML</div>
+  </div>
+
+  <div class="section" id="pub">
+    <h2 class="section-title">发表论文</h2>
+    <div class="publication-item">Chen et al. Ride Equity... (Under Review)</div>
+    <div class="publication-item">Hu & Chen. Greenery Inequality... (Revise)</div>
+    <div class="publication-item">Dai et al. Heritage Architecture. Land, 2024</div>
+  </div>
+
+  <div class="section" id="conf">
+    <h2 class="section-title">会议论文</h2>
+    <div class="publication-item">Hu & Chen. Greenspace in NY vs London. CELA 2025</div>
+    <div class="publication-item">Hu. AI & Spatial Justice in London. IFOU 2024</div>
+  </div>
+
+  <div class="section" id="exp">
+    <h2 class="section-title">研究与项目经历</h2>
+    <div class="item">
+      <div class="item-title"><span>Urban Resilience Project</span><span>2024 - Now</span></div>
+      <ul>
+        <li>Spatial inequality analysis on green space access</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section" id="skills">
+    <h2 class="section-title">技能专长</h2>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>GIS</strong><ul><li>ArcGIS</li><li>QGIS</li><li>Mapbox</li></ul></div>
+      <div class="skill-category"><strong>建模</strong><ul><li>Rhino</li><li>Blender</li><li>SketchUp</li></ul></div>
+      <div class="skill-category"><strong>数据分析</strong><ul><li>Python</li><li>SPSS</li><li>R</li></ul></div>
+    </div>
+  </div>
 </div>
-<div>PhD School of Data Science (2025 - 2028)</div>
-<div>Research: Quantitative Compression and Distillation of LLM</div>
-</div>
-</div>
-</div>
-<div class="section" id="interest">
-<h2 class="section-title">研究兴趣</h2>
-<div class="content">
-<div class="item">Sensor/Vision-Based Behavior Analysis in Urban Parks</div>
-<div class="item">Environmental Justice via Big Data + GIS + ML</div>
-</div>
-</div>
-<div class="section" id="pub">
-<h2 class="section-title">发表论文</h2>
-<div class="content">
-<div class="publication-item">Chen et al. Ride Equity... (Under Review)</div>
-<div class="publication-item">Hu &amp; Chen. Greenery Inequality... (Revise)</div>
-<div class="publication-item">Dai et al. Li River Basin Heritage. Land, 2024</div>
-</div>
-</div>
-<div class="section" id="conf">
-<h2 class="section-title">会议论文</h2>
-<div class="content">
-<div class="publication-item">Hu &amp; Chen. Greenspace in NY vs London. CELA 2025</div>
-<div class="publication-item">Hu. AI &amp; Spatial Justice in London. IFOU 2024</div>
-</div>
-</div>
-<div class="section" id="exp">
-<h2 class="section-title">研究与工作经历</h2>
-<div class="content">
-<div class="item">
-<div class="item-title">
-<span>Comparative Urban Resilience Project</span><span>2024 - Present</span>
-</div>
-<ul>
-<li>Spatial analysis (OLS, GWR, MGWR) on UGS access</li>
-<li>Paper to Urban Forestry &amp; Urban Greening</li>
-</ul>
-</div>
-<div class="item">
-<div class="item-title">
-<span>UCL Architecture Workshop</span><span>2023</span>
-</div>
-<div>XR + Blender + Stable Diffusion for built environment</div>
-</div>
-</div>
-</div>
-<div class="section" id="skills">
-<h2 class="section-title">技能专长</h2>
-<div class="skills-grid">
-<div class="skill-category">
-<h3>设计与建模</h3>
-<ul><li>Rhino</li><li>Grasshopper</li><li>SketchUp</li><li>Blender</li></ul>
-</div>
-<div class="skill-category">
-<h3>GIS &amp; 数据</h3>
-<ul><li>ArcGIS</li><li>QGIS</li><li>Mapbox</li></ul>
-</div>
-<div class="skill-category">
-<h3>统计与可视化</h3>
-<ul><li>Python</li><li>SPSS</li><li>R Studio</li></ul>
-</div>
-</div>
-</div>
-</div>
+
+<button id="pdf-button" onclick="window.print()">📄 导出为 PDF</button>
 </body>
 </html>
