@@ -1,298 +1,229 @@
+
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuanhao Su - 个人简历</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section-title {
-            font-size: 1.5em;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .content {
-            margin-left: 20px;
-        }
-        .item {
-            margin-bottom: 20px;
-        }
-        .item-title {
-            font-weight: bold;
-            color: #2c3e50;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-        .item-date {
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 15px;
-        }
-        .skill-category {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .skill-list {
-            list-style: none;
-        }
-        .skill-list li {
-            margin-bottom: 5px;
-        }
-        .publication-item {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .publication-item::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #3498db;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yuanhao Su - 个人简历</title>
+<style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      padding: 100px 20px 60px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
+    }
+    header p {
+      font-size: 1.1em;
+      animation: fadeInUp 1s ease;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3498db;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      animation: fadeIn 0.6s ease;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-size: 1.8em;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .content {
+      margin-left: 10px;
+    }
+    .item {
+      margin-bottom: 20px;
+    }
+    .item-title {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill-category {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .publication-item {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .publication-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media print {
+      nav, header { display: none; }
+      .container {
+        margin: 0;
+        box-shadow: none;
+        background: white;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Yuanhao Su</h1>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <span>1446585363@qq.com</span>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>+86 13306900585</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">教育背景</h2>
-            <div class="content">
-                <div class="item">
-                    <div class="item-title">
-                        <span>Fuzhou University</span>
-                        <span>Fuzhou, China</span>
-                    </div>
-                    <div>PhD School of Data Science (Sept 2025 - Sept 2028)</div>
-                    <div>Research Interests: Quantitative Compression and Distillation Based on Large Language Model LLM</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">研究兴趣</h2>
-            <div class="content">
-                <div class="item">
-                    <div>Human Behavior and Well-being in Natural Areas: Applying sensor and vision-based technologies to understand human volumes, trajectories, and activities in urban, regional, and national parks.</div>
-                </div>
-                <div class="item">
-                    <div>Urban Nature Vitality and Environmental Justice: Using big data (Points of Interest, Street View Imagery, Social-economic data, Social media data), machine learning (Computer vision), and tools (GIS, Smartphone GPS, Sensor, Unmanned Aerial Vehicle), to evaluate diversity, preference, and distribution in human-nature interaction.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">发表论文</h2>
-            <div class="content">
-                <div class="publication-item">
-                    Chen, Y., Hu, Y., Cai, Y*. Ride Equity: Exploring Socioeconomic and Environmental Disparities in Bike Share System Distribution in Major U.S. Cities. Transportation Research Part D: Transport and Environment. (Under Review) | JCR Q1, IF=7.3
-                </div>
-                <div class="publication-item">
-                    Hu, Y., & Chen, M*. (2024). Comparative analysis of greenery inequalities in New York and London: Social-economic and spatial dimensions. Urban Forestry & Urban Greening. (Revise) | JCR Q1, IF=6.0
-                </div>
-                <div class="publication-item">
-                    Dai, Q., Wei, Y., Hu, Y., Chen, T., Yan, Y., Gu, Y., & Wang, Q. (2024). Research on the Value of Water-Related Cultural Heritage Architecture from Historical Environmental Records: Evidence from the Li River Basin in China. Land, 13(6), 838. DOI:10.3390/land13060838. | JCR Q2, IF=3.2
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">会议论文</h2>
-            <div class="content">
-                <div class="publication-item">
-                    Hu, Y., & Chen, M. (2025). Factors influencing the use of greenspace in New York and London: A comparative study of environmental justice in the US and UK. 2025 CELA (Council of Educators in Landscape Architecture). Conference Abstract. (Under Review)
-                </div>
-                <div class="publication-item">
-                    Hu, Y. (2025). Utilizing Artificial Intelligence to Promote Spatial Justice in Urban Marginalized Communities: A Case Study of London. IFOU 2024(The International Forum on Urbanism).Conference Abstract. (Accept)
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">研究经历</h2>
-            <div class="content">
-                <div class="item">
-                    <div class="item-title">
-                        <span>Comparative Urban Resilience and Environmental Justice in Global Cities</span>
-                        <span>Jun 2024 - Present</span>
-                    </div>
-                    <div>Group leader, academic project supervised by Dr. Mingze Chen</div>
-                    <ul>
-                        <li>Leveraged advanced spatial analysis techniques, including OLS, GWR, and MGWR, to explore socio-economic and spatial disparities in urban green space (UGS) access between New York and London.</li>
-                        <li>Revealed significant inequalities in UGS access, particularly for low-income groups and in economically weaker urban areas.</li>
-                        <li>Independently authored and submitted a research paper to Urban Forestry & Urban Greening as the first author.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">项目经历</h2>
-            <div class="content">
-                <div class="item">
-                    <div class="item-title">
-                        <span>Bartlett School of Architecture, University College London</span>
-                        <span>Sept 2023</span>
-                    </div>
-                    <div>Workshop 8: AI and virtual extended reality</div>
-                    <div>Applied Blender and Stable diffusion to explore how XR technology is changing the way people's interaction and experience with the built environment.</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span>Zhijiang College of Zhejiang University of Technology Architectural Branch</span>
-                        <span>May 2021 - Aug 2021</span>
-                    </div>
-                    <div>Head of Campus Bidding Project & Internship Assistant</div>
-                    <div>Supported the architectural team with design tasks and technical drawings. Contributed to the successful completion of on-campus landmark buildings.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">专业经历</h2>
-            <div class="content">
-                <div class="item">
-                    <div class="item-title">
-                        <span>Zhongting International Design Co., Ltd. Ningbo Branch</span>
-                        <span>Sept 2022 - Oct 2022</span>
-                    </div>
-                    <div>Assistant Architect</div>
-                    <div>Assisted in monitoring engineer quality, involved in the architectural scheme design and refined design of construction drawings.</div>
-                </div>
-
-                <div class="item">
-                    <div class="item-title">
-                        <span>Kaihong Building Materials Co., Ltd., Ningbo Branch</span>
-                        <span>Jun 2022 - Aug 2022</span>
-                    </div>
-                    <div>Internships for assistants</div>
-                    <div>Played a key role in the digital manufacturing process for the restoration of ancient buildings, including the renewal and remodeling of building materials and space form.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">获奖情况</h2>
-            <div class="content">
-                <div class="item">
-                    <div>Scholarship of Zhijiang College of Zhejiang University of Technology | Third Prize (2021)</div>
-                    <div>Shaoxing Undergraduate Rural Revitalization Competition | First Prize (2021)</div>
-                    <div>"Yuguang Cup" Architectural Design Competition | Third Prize (2020)</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">技能专长</h2>
-            <div class="content">
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>计算设计与建筑</h3>
-                        <ul class="skill-list">
-                            <li>Rhino</li>
-                            <li>Grasshopper</li>
-                            <li>Blender</li>
-                            <li>SketchUp</li>
-                            <li>Unreal Engine 5</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>空间数据分析</h3>
-                        <ul class="skill-list">
-                            <li>ArcGIS Pro</li>
-                            <li>ArcGIS</li>
-                            <li>QGIS</li>
-                            <li>Mapbox</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>数据统计与可视化</h3>
-                        <ul class="skill-list">
-                            <li>Python</li>
-                            <li>R Studio</li>
-                            <li>SPSS</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>算法</h3>
-                        <ul class="skill-list">
-                            <li>Python</li>
-                            <li>Google Colab</li>
-                            <li>8th Wall</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<header>
+<h1>Yuanhao Su</h1>
+<p>📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
+</header>
+<nav>
+<a href="#edu">教育</a>
+<a href="#interest">兴趣</a>
+<a href="#pub">论文</a>
+<a href="#conf">会议</a>
+<a href="#exp">经历</a>
+<a href="#skills">技能</a>
+</nav>
+<div class="container" style="max-width: 1100px; padding: 60px; background-color: rgba(255, 255, 255, 0.9); border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+<div class="section" id="edu">
+<h2 class="section-title">教育背景</h2>
+<div class="content">
+<div class="item">
+<div class="item-title">
+<span>Fuzhou University</span>
+<span>Fuzhou, China</span>
+</div>
+<div>PhD School of Data Science (2025 - 2028)</div>
+<div>Research: Quantitative Compression and Distillation of LLM</div>
+</div>
+</div>
+</div>
+<div class="section" id="interest">
+<h2 class="section-title">研究兴趣</h2>
+<div class="content">
+<div class="item">Sensor/Vision-Based Behavior Analysis in Urban Parks</div>
+<div class="item">Environmental Justice via Big Data + GIS + ML</div>
+</div>
+</div>
+<div class="section" id="pub">
+<h2 class="section-title">发表论文</h2>
+<div class="content">
+<div class="publication-item">Chen et al. Ride Equity... (Under Review)</div>
+<div class="publication-item">Hu &amp; Chen. Greenery Inequality... (Revise)</div>
+<div class="publication-item">Dai et al. Li River Basin Heritage. Land, 2024</div>
+</div>
+</div>
+<div class="section" id="conf">
+<h2 class="section-title">会议论文</h2>
+<div class="content">
+<div class="publication-item">Hu &amp; Chen. Greenspace in NY vs London. CELA 2025</div>
+<div class="publication-item">Hu. AI &amp; Spatial Justice in London. IFOU 2024</div>
+</div>
+</div>
+<div class="section" id="exp">
+<h2 class="section-title">研究与工作经历</h2>
+<div class="content">
+<div class="item">
+<div class="item-title">
+<span>Comparative Urban Resilience Project</span><span>2024 - Present</span>
+</div>
+<ul>
+<li>Spatial analysis (OLS, GWR, MGWR) on UGS access</li>
+<li>Paper to Urban Forestry &amp; Urban Greening</li>
+</ul>
+</div>
+<div class="item">
+<div class="item-title">
+<span>UCL Architecture Workshop</span><span>2023</span>
+</div>
+<div>XR + Blender + Stable Diffusion for built environment</div>
+</div>
+</div>
+</div>
+<div class="section" id="skills">
+<h2 class="section-title">技能专长</h2>
+<div class="skills-grid">
+<div class="skill-category">
+<h3>设计与建模</h3>
+<ul><li>Rhino</li><li>Grasshopper</li><li>SketchUp</li><li>Blender</li></ul>
+</div>
+<div class="skill-category">
+<h3>GIS &amp; 数据</h3>
+<ul><li>ArcGIS</li><li>QGIS</li><li>Mapbox</li></ul>
+</div>
+<div class="skill-category">
+<h3>统计与可视化</h3>
+<ul><li>Python</li><li>SPSS</li><li>R Studio</li></ul>
+</div>
+</div>
+</div>
+</div>
 </body>
-</html> 
+</html>
