@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuanhao Su - 个人简历</title>
   <style>
     * {
@@ -13,21 +13,43 @@
       background: linear-gradient(to bottom, #f4f7fa, #eaf4ff);
       color: #2d3436;
     }
+    #particles-js {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
     header {
-      background: url('background.jpg') center/cover no-repeat;
+      position: relative;
       padding: 120px 20px 70px;
       color: white;
       text-align: center;
-      position: relative;
+      background-color: #1e1e2f;
+      overflow: hidden;
+    }
+    .header-bg {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('background.jpg') center center no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+      z-index: 0;
+      opacity: 0.3;
     }
     header h1 {
       font-size: 3em;
       margin-bottom: 10px;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      animation: fadeInDown 1s ease;
+      position: relative;
+      z-index: 2;
+      animation: pulseGlow 2s infinite ease-in-out;
     }
     header p {
       font-size: 1.1em;
+      position: relative;
+      z-index: 2;
       animation: fadeInUp 1s ease;
     }
     nav {
@@ -95,7 +117,7 @@
       position: relative;
     }
     .publication-item::before {
-      content: "•";
+      content: "\2022";
       position: absolute;
       left: 0;
       color: #6c5ce7;
@@ -130,39 +152,37 @@
       cursor: pointer;
       animation: glowing 1.5s infinite alternate;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    #pdf-button:hover {
-      background: linear-gradient(45deg, #5e54d8, #00bfa6);
+      z-index: 999;
     }
     @keyframes glowing {
       0% { box-shadow: 0 0 5px #6c5ce7; }
       100% { box-shadow: 0 0 20px #00cec9; }
     }
-
+    @keyframes pulseGlow {
+      0% { text-shadow: 0 0 10px #a29bfe; }
+      50% { text-shadow: 0 0 20px #6c5ce7; }
+      100% { text-shadow: 0 0 10px #a29bfe; }
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @media print {
-      #pdf-button, nav, header { display: none; }
+      #pdf-button, nav, header, #particles-js { display: none; }
     }
   </style>
 </head>
 <body>
+<div id="particles-js"></div>
 <header>
+  <div class="header-bg"></div>
   <h1>Yuanhao Su</h1>
   <p>📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
 </header>
-
 <nav>
   <a href="#edu">教育</a>
   <a href="#interest">兴趣</a>
@@ -171,7 +191,6 @@
   <a href="#exp">经历</a>
   <a href="#skills">技能</a>
 </nav>
-
 <div class="container">
   <div class="section" id="edu">
     <h2 class="section-title">教育背景</h2>
@@ -221,5 +240,40 @@
 </div>
 
 <button id="pdf-button" onclick="window.print()">📄 导出为 PDF</button>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#a29bfe" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 120,
+      color: "#6c5ce7",
+      opacity: 0.4,
+      width: 1
+    },
+    move: { enable: true, speed: 1.5 }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "grab" },
+      onclick: { enable: false },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: { opacity: 0.5 }
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
 </body>
 </html>
