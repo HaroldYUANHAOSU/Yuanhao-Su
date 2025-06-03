@@ -1,4 +1,4 @@
-# Yequan Hu's Personal CV
+# Yuanhao Su's Personal CV
 
 This is my personal CV website, showcasing my academic background, research experience, and professional skills.
 
