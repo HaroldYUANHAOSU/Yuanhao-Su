@@ -50,7 +50,8 @@
     @keyframes glowing { 0% { box-shadow: 0 0 5px #6c5ce7;} 100% { box-shadow: 0 0 20px #00cec9;}}
     @keyframes pulseGlow { 0% { text-shadow: 0 0 10px #a29bfe;} 50% { text-shadow: 0 0 20px #6c5ce7;} 100% { text-shadow: 0 0 10px #a29bfe;}}
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}
+    }
     @media print { #pdf-button, #lang-button, nav, header, #particles-js { display: none; } }
   </style>
 </head>
@@ -64,40 +65,45 @@
   <p id="contact-en">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
   <p id="contact-cn" style="display:none;">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
 </header>
+
+<!-- ======= NAVIGATION，所有ID严格唯一 ======= -->
 <nav>
-  <a href="#edu" id="nav-edu-en">Education</a>
-  <a href="#interest" id="nav-interest-en">Research Interests</a>
-  <a href="#pub" id="nav-pub-en">Publications</a>
-  <a href="#conf" id="nav-conf-en">Competitions & Achievements</a>
-  <a href="#internship" id="nav-conf-en">Internship Experience</a>
-  <a href="#skills" id="nav-skills-en">Skills</a>
-  <a href="#edu" id="nav-edu-cn" style="display:none;">教育背景</a>
-  <a href="#interest" id="nav-interest-cn" style="display:none;">研究兴趣</a>
-  <a href="#pub" id="nav-pub-cn" style="display:none;">发表论文</a>
-  <a href="#conf" id="nav-conf-cn" style="display:none;">比赛与成果</a>
-  <a href="#internship" id="nav-conf-cn" style="display:none;">实习经历</a>
-  <a href="#skills" id="nav-skills-cn" style="display:none;">技能专长</a>
+  <!-- English -->
+  <a href="#edu-en" id="nav-edu-en">Education</a>
+  <a href="#interest-en" id="nav-interest-en">Research Interests</a>
+  <a href="#pub-en" id="nav-pub-en">Publications</a>
+  <a href="#conf-en" id="nav-conf-en">Competitions & Achievements</a>
+  <a href="#internship-en" id="nav-internship-en">Internship Experience</a>
+  <a href="#skills-en" id="nav-skills-en">Skills</a>
+  <!-- Chinese -->
+  <a href="#edu-cn" id="nav-edu-cn" style="display:none;">教育背景</a>
+  <a href="#interest-cn" id="nav-interest-cn" style="display:none;">研究兴趣</a>
+  <a href="#pub-cn" id="nav-pub-cn" style="display:none;">发表论文</a>
+  <a href="#conf-cn" id="nav-conf-cn" style="display:none;">比赛与成果</a>
+  <a href="#internship-cn" id="nav-internship-cn" style="display:none;">实习经历</a>
+  <a href="#skills-cn" id="nav-skills-cn" style="display:none;">技能专长</a>
 </nav>
+
 <div class="container">
   <!-- ENGLISH VERSION -->
   <div id="content-en">
-    <div class="section" id="edu">
+    <div class="section" id="edu-en">
       <h2 class="section-title">Education</h2>
       <div class="item">
         <div class="item-title"><span>Fuzhou University</span><span>Fuzhou, China</span></div>
         <div>BSc in Software Engineering (2023 - 2027)</div>
       </div>
     </div>
-    <div class="section" id="interest">
+    <div class="section" id="interest-en">
       <h2 class="section-title">Research Interests</h2>
       <div class="item">I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.</div>
     </div>
-    <div class="section" id="pub">
+    <div class="section" id="pub-en">
       <h2 class="section-title">Publications</h2>
       <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (Revise)</div>
       <div class="publication-item">... (Under Review)</div>
     </div>
-    <div class="section" id="conf">
+    <div class="section" id="conf-en">
       <h2 class="section-title">Competitions & Achievements</h2>
       <div class="publication-item">Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</div>
       <div class="publication-item">Third Prize, 14th Cross-Strait Information Service Innovation Competition & 18th Fujian Provincial Computer Software Design Competition, 2024</div>
@@ -106,7 +112,7 @@
       <div class="publication-item">China Collegiate Computer Design Competition, 2025</div>
       <div class="publication-item">Software Copyright: 怡伴APP1.0, Registration No. 2025SR0689058, 2025</div>
     </div>
-    <div class="section" id="internship">
+    <div class="section" id="internship-en">
       <h2 class="section-title">Internship Experience</h2>
       <div class="item">
         <div class="item-title"><span>linewell Co., Ltd.</span><span>Jul. 2024 – Aug. 2024</span></div>
@@ -116,8 +122,7 @@
         </div>
       </div>
     </div>
-
-    <div class="section" id="skills">
+    <div class="section" id="skills-en">
       <h2 class="section-title">Skills</h2>
       <div class="skills-grid">
         <div class="skill-category"><strong>English</strong><ul><li>CET-4: 537</li><li>CET-6: 497</li></ul></div>
@@ -139,10 +144,10 @@
       <h2 class="section-title">研究兴趣</h2>
       <div class="item">我的研究兴趣包括跨模态检索方法，尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时，对时空数据的建模与分析也有浓厚兴趣，关注数据随时间和空间变化的建模与理解。</div>
     </div>
-    <div class="section" id="pub">
+    <div class="section" id="pub-cn">
       <h2 class="section-title">发表论文</h2>
-      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (Revise)</div>
-      <div class="publication-item">... (Under Review)</div>
+      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (修改中)</div>
+      <div class="publication-item">... (审核中)</div>
     </div>
     <div class="section" id="conf-cn">
       <h2 class="section-title">比赛与成果</h2>
@@ -163,7 +168,6 @@
         </div>
       </div>
     </div>
-
     <div class="section" id="skills-cn">
       <h2 class="section-title">技能专长</h2>
       <div class="skills-grid">
@@ -212,30 +216,14 @@ particlesJS("particles-js", {
 
 // Language toggle
 function toggleLang() {
-  let enVisible = document.getElementById('content-en').style.display !== 'none';
-  document.getElementById('content-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('content-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('name-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('name-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('contact-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('contact-cn').style.display = enVisible ? '' : 'none';
+  let isEnglish = document.getElementById('content-en').style.display !== 'none';
 
-  // Nav links
-  document.getElementById('nav-edu-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('nav-interest-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('nav-pub-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('nav-conf-en').style.display = enVisible ? 'none' : '';
-  document.getElementById('nav-skills-en').style.display = enVisible ? 'none' : '';
+  // Main content
+  document.getElementById('content-en').style.display = isEnglish ? 'none' : '';
+  document.getElementById('content-cn').style.display = isEnglish ? '' : 'none';
 
-  document.getElementById('nav-edu-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('nav-interest-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('nav-pub-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('nav-conf-cn').style.display = enVisible ? '' : 'none';
-  document.getElementById('nav-skills-cn').style.display = enVisible ? '' : 'none';
-
-  // Button text
-  document.getElementById('lang-button').innerText = enVisible ? 'English' : '中文';
-}
-</script>
-</body>
-</html>
+  // Header
+  document.getElementById('name-en').style.display = isEnglish ? 'none' : '';
+  document.getElementById('name-cn').style.display = isEnglish ? '' : 'none';
+  document.getElementById('contact-en').style.display = isEnglish ? 'none' : '';
+  document.getElementById
