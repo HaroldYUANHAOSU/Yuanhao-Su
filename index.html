@@ -226,4 +226,20 @@ function toggleLang() {
   document.getElementById('name-en').style.display = isEnglish ? 'none' : '';
   document.getElementById('name-cn').style.display = isEnglish ? '' : 'none';
   document.getElementById('contact-en').style.display = isEnglish ? 'none' : '';
-  document.getElementById
+  document.getElementById('contact-cn').style.display = isEnglish ? '' : 'none';
+
+  // Navigation
+  let navs = [
+    'nav-edu', 'nav-interest', 'nav-pub', 'nav-conf', 'nav-internship', 'nav-skills'
+  ];
+  navs.forEach(id => {
+    document.getElementById(id+'-en').style.display = isEnglish ? 'none' : '';
+    document.getElementById(id+'-cn').style.display = isEnglish ? '' : 'none';
+  });
+
+  // Button text
+  document.getElementById('lang-button').innerText = isEnglish ? 'English' : '中文';
+}
+</script>
+</body>
+</html>
