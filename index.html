@@ -1,235 +1,154 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuanhao Su - 个人简历</title>
+  <title>Yuanhao Su - CV / 个人简历</title>
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      font-family: "Microsoft YaHei", sans-serif;
+      font-family: "Microsoft YaHei", "Arial", sans-serif;
       background: linear-gradient(to bottom, #f4f7fa, #eaf4ff);
       color: #2d3436;
     }
-    #particles-js {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: 0;
-    }
+    #particles-js { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
     header {
-      position: relative;
-      padding: 120px 20px 70px;
-      color: white;
-      text-align: center;
-      background-color: #1e1e2f;
-      overflow: hidden;
+      position: relative; padding: 120px 20px 70px; color: white; text-align: center;
+      background-color: #1e1e2f; overflow: hidden;
     }
-    .header-bg {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('background.jpg') center center no-repeat;
-      background-size: cover;
-      transform: translateY(-50%);
-      z-index: 0;
-      opacity: 0.3;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 2;
-      animation: pulseGlow 2s infinite ease-in-out;
-    }
-    header p {
-      font-size: 1.1em;
-      position: relative;
-      z-index: 2;
-      animation: fadeInUp 1s ease;
-    }
+    .header-bg { position: absolute; top: 50%; left: 0; width: 100%; height: 100%; background: url('background.jpg') center center no-repeat; background-size: cover; transform: translateY(-50%); z-index: 0; opacity: 0.3;}
+    header h1 { font-size: 3em; margin-bottom: 10px; position: relative; z-index: 2; animation: pulseGlow 2s infinite ease-in-out;}
+    header p { font-size: 1.1em; position: relative; z-index: 2; animation: fadeInUp 1s ease;}
     nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      z-index: 1000;
+      position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+      display: flex; justify-content: center; gap: 30px; padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 1000;
     }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      padding: 6px 12px;
-      border-radius: 5px;
-    }
-    nav a:hover {
-      color: #fff;
-      background: linear-gradient(120deg, #6c5ce7, #a29bfe);
-      box-shadow: 0 2px 8px rgba(108, 92, 231, 0.5);
-    }
+    nav a { text-decoration: none; color: #333; font-weight: bold; transition: all 0.3s ease; padding: 6px 12px; border-radius: 5px;}
+    nav a:hover { color: #fff; background: linear-gradient(120deg, #6c5ce7, #a29bfe); box-shadow: 0 2px 8px rgba(108, 92, 231, 0.5);}
     .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 40px;
+      max-width: 1100px; margin: 40px auto; padding: 40px;
       background: rgba(255, 255, 255, 0.92);
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.08);
       animation: fadeIn 0.6s ease;
     }
-    .section {
-      margin-bottom: 50px;
-      border-left: 6px solid #a29bfe;
-      padding-left: 20px;
-      background: linear-gradient(135deg, #ffffff, #f0f4ff);
-      border-radius: 8px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+    .section { margin-bottom: 50px; border-left: 6px solid #a29bfe; padding-left: 20px; background: linear-gradient(135deg, #ffffff, #f0f4ff); border-radius: 8px; padding-top: 20px; padding-bottom: 20px;}
+    .section-title { font-size: 1.8em; color: #4b4bff; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid; border-image: linear-gradient(to right, #6c5ce7, #a29bfe) 1; text-shadow: 1px 1px 3px rgba(100, 100, 255, 0.2);}
+    .item-title { display: flex; justify-content: space-between; font-weight: bold; color: #2c3e50; margin-bottom: 5px;}
+    .publication-item { margin-bottom: 10px; padding-left: 20px; position: relative;}
+    .publication-item::before { content: "\2022"; position: absolute; left: 0; color: #6c5ce7;}
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;}
+    .skill-category { background: #f9f9f9; padding: 15px; border-radius: 6px; transition: 0.3s ease;}
+    .skill-category:hover { background: linear-gradient(to right, #74b9ff, #a29bfe); color: white; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+    #pdf-button, #lang-button {
+      position: fixed; right: 20px; background: linear-gradient(45deg, #6c5ce7, #00cec9); color: white; border: none;
+      border-radius: 25px; padding: 12px 20px; font-size: 14px; cursor: pointer;
+      animation: glowing 1.5s infinite alternate; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 999;
     }
-    .section-title {
-      font-size: 1.8em;
-      color: #4b4bff;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid;
-      border-image: linear-gradient(to right, #6c5ce7, #a29bfe) 1;
-      text-shadow: 1px 1px 3px rgba(100, 100, 255, 0.2);
-    }
-    .item-title {
-      display: flex;
-      justify-content: space-between;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-bottom: 5px;
-    }
-    .publication-item {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-    .publication-item::before {
-      content: "\2022";
-      position: absolute;
-      left: 0;
-      color: #6c5ce7;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .skill-category {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 6px;
-      transition: 0.3s ease;
-    }
-    .skill-category:hover {
-      background: linear-gradient(to right, #74b9ff, #a29bfe);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    #pdf-button {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: linear-gradient(45deg, #6c5ce7, #00cec9);
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 12px 20px;
-      font-size: 14px;
-      cursor: pointer;
-      animation: glowing 1.5s infinite alternate;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      z-index: 999;
-    }
-    @keyframes glowing {
-      0% { box-shadow: 0 0 5px #6c5ce7; }
-      100% { box-shadow: 0 0 20px #00cec9; }
-    }
-    @keyframes pulseGlow {
-      0% { text-shadow: 0 0 10px #a29bfe; }
-      50% { text-shadow: 0 0 20px #6c5ce7; }
-      100% { text-shadow: 0 0 10px #a29bfe; }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media print {
-      #pdf-button, nav, header, #particles-js { display: none; }
-    }
+    #pdf-button { bottom: 20px;}
+    #lang-button { top: 20px;}
+    @keyframes glowing { 0% { box-shadow: 0 0 5px #6c5ce7;} 100% { box-shadow: 0 0 20px #00cec9;}}
+    @keyframes pulseGlow { 0% { text-shadow: 0 0 10px #a29bfe;} 50% { text-shadow: 0 0 20px #6c5ce7;} 100% { text-shadow: 0 0 10px #a29bfe;}}
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
+    @media print { #pdf-button, #lang-button, nav, header, #particles-js { display: none; } }
   </style>
 </head>
 <body>
 <div id="particles-js"></div>
+<button id="lang-button" onclick="toggleLang()">中文</button>
 <header>
   <div class="header-bg"></div>
-  <h1>Yuanhao Su ｜ 苏元皓</h1>
-  <p>📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
+  <h1 id="name-en">Yuanhao Su</h1>
+  <h1 id="name-cn" style="display:none;">苏元皓</h1>
+  <p id="contact-en">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
+  <p id="contact-cn" style="display:none;">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
 </header>
 <nav>
-  <a href="#edu">教育</a>
-  <a href="#interest">兴趣</a>
-  <a href="#pub">论文</a>
-  <a href="#conf">比赛</a>
-  <a href="#skills">技能</a>
+  <a href="#edu" id="nav-edu-en">Education</a>
+  <a href="#interest" id="nav-interest-en">Research Interests</a>
+  <a href="#pub" id="nav-pub-en">Publications</a>
+  <a href="#conf" id="nav-conf-en">Competitions</a>
+  <a href="#skills" id="nav-skills-en">Skills</a>
+  <a href="#edu" id="nav-edu-cn" style="display:none;">教育背景</a>
+  <a href="#interest" id="nav-interest-cn" style="display:none;">研究兴趣</a>
+  <a href="#pub" id="nav-pub-cn" style="display:none;">发表论文</a>
+  <a href="#conf" id="nav-conf-cn" style="display:none;">比赛经历</a>
+  <a href="#skills" id="nav-skills-cn" style="display:none;">技能专长</a>
 </nav>
 <div class="container">
-  <div class="section" id="edu">
-    <h2 class="section-title">教育背景</h2>
-    <div class="item">
-      <div class="item-title"><span>Fuzhou University</span><span>Fuzhou, China</span></div>
-      <div>BSC in Software Engineering (2023 - 2027)</div>
+  <!-- ENGLISH VERSION -->
+  <div id="content-en">
+    <div class="section" id="edu">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-title"><span>Fuzhou University</span><span>Fuzhou, China</span></div>
+        <div>BSc in Software Engineering (2023 - 2027)</div>
+      </div>
+    </div>
+    <div class="section" id="interest">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="item">I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.</div>
+    </div>
+    <div class="section" id="pub">
+      <h2 class="section-title">Publications</h2>
+      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (Revise)</div>
+      <div class="publication-item">... (Under Review)</div>
+    </div>
+    <div class="section" id="conf">
+      <h2 class="section-title">Competitions</h2>
+      <div class="publication-item">Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</div>
+      <div class="publication-item">Third Prize, 14th Cross-Strait Information Service Innovation Competition & 18th Fujian Provincial Computer Software Design Competition, 2024</div>
+      <div class="publication-item">Third Prize, 16th China College Student Service Outsourcing Innovation and Entrepreneurship Competition (East China Division), 2025</div>
+      <div class="publication-item">11th National College Students Statistical Modeling Competition, 2025</div>
+      <div class="publication-item">China Collegiate Computer Design Competition, 2025</div>
+    </div>
+    <div class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category"><strong>English</strong><ul><li>CET-4: 537</li><li>CET-6: 497</li></ul></div>
+        <div class="skill-category"><strong>Programming</strong><ul><li>Java (Full-Stack)</li><li>Python (AI Model Development)</li></ul></div>
+        <div class="skill-category"><strong>Sports</strong><ul><li>Table Tennis</li><li>Tennis</li></ul></div>
+      </div>
     </div>
   </div>
-
-  <div class="section" id="interest">
-    <h2 class="section-title">研究兴趣</h2>
-    <div class="item">I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.</div>
-  </div>
-
-  <div class="section" id="pub">
-    <h2 class="section-title">发表论文</h2>
-    <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. [International Journal of Applied Earth Observation and Geoinformation].(Revise)</div>
-    <div class="publication-item">... (Under Review)</div>
-  </div>
-
-  <div class="section" id="conf">
-    <h2 class="section-title">比赛经历</h2>
-    <div class="publication-item">Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</div>
-    <div class="publication-item">Third Prize, 14th Cross-Strait Information Service Innovation Competition & 18th Fujian Provincial Computer Software Design Competition, 2024</div>
-    <div class="publication-item">Third Prize, 16th China College Student Service Outsourcing Innovation and Entrepreneurship Competition (East China Division), 2025</div>
-    <div class="publication-item">11th National College Students Statistical Modeling Competition, 2025</div>
-    <div class="publication-item">China Collegiate Computer Design Competition, 2025</div>
-  </div>
-
-  <div class="section" id="skills">
-    <h2 class="section-title">技能专长</h2>
-    <div class="skills-grid">
-      <div class="skill-category"><strong>English</strong><ul><li>CET-4: 537</li><li>CET-6: 497</li></ul></div>
-      <div class="skill-category"><strong>Programming</strong><ul><li>Java (Full-Stack)</li><li>Python (AI Model Development)</li></ul></div>
-      <div class="skill-category"><strong>Sports</strong><ul><li>Table Tennis</li><li>Tennis</li></ul></div>
+  <!-- CHINESE VERSION -->
+  <div id="content-cn" style="display:none;">
+    <div class="section" id="edu-cn">
+      <h2 class="section-title">教育背景</h2>
+      <div class="item">
+        <div class="item-title"><span>福州大学</span><span>福州，中国</span></div>
+        <div>软件工程 本科（2023 - 2027）</div>
+      </div>
+    </div>
+    <div class="section" id="interest-cn">
+      <h2 class="section-title">研究兴趣</h2>
+      <div class="item">我的研究兴趣包括跨模态检索方法，尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时，对时空数据的建模与分析也有浓厚兴趣，关注数据随时间和空间变化的建模与理解。</div>
+    </div>
+    <div class="section" id="pub">
+      <h2 class="section-title">Publications</h2>
+      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (Revise)</div>
+      <div class="publication-item">... (Under Review)</div>
+    </div>
+    <div class="section" id="conf-cn">
+      <h2 class="section-title">比赛经历</h2>
+      <div class="publication-item">中国高校计算机大赛移动应用创新赛（华东赛区）二等奖，2024</div>
+      <div class="publication-item">第十四届海峡两岸信息服务创新大赛 暨福建省第十八届计算机软件设计大赛 三等奖，2024</div>
+      <div class="publication-item">第十六届中国大学生服务外包创新创业大赛（华东赛区）三等奖，2025</div>
+      <div class="publication-item">第十一届全国大学生统计建模大赛，2025</div>
+      <div class="publication-item">中国大学生计算机设计大赛，2025</div>
+    </div>
+    <div class="section" id="skills-cn">
+      <h2 class="section-title">技能专长</h2>
+      <div class="skills-grid">
+        <div class="skill-category"><strong>英语</strong><ul><li>四级：537</li><li>六级：497</li></ul></div>
+        <div class="skill-category"><strong>编程</strong><ul><li>Java 全栈开发</li><li>Python AI模型开发</li></ul></div>
+        <div class="skill-category"><strong>体育</strong><ul><li>乒乓球</li><li>网球</li></ul></div>
+      </div>
     </div>
   </div>
 </div>
-
-<button id="pdf-button" onclick="window.print()">📄 导出为 PDF</button>
+<button id="pdf-button" onclick="window.print()">📄 Export as PDF</button>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
 particlesJS("particles-js", {
@@ -264,6 +183,33 @@ particlesJS("particles-js", {
   },
   retina_detect: true
 });
+
+// Language toggle
+function toggleLang() {
+  let enVisible = document.getElementById('content-en').style.display !== 'none';
+  document.getElementById('content-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('content-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('name-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('name-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('contact-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('contact-cn').style.display = enVisible ? '' : 'none';
+
+  // Nav links
+  document.getElementById('nav-edu-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('nav-interest-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('nav-pub-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('nav-conf-en').style.display = enVisible ? 'none' : '';
+  document.getElementById('nav-skills-en').style.display = enVisible ? 'none' : '';
+
+  document.getElementById('nav-edu-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('nav-interest-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('nav-pub-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('nav-conf-cn').style.display = enVisible ? '' : 'none';
+  document.getElementById('nav-skills-cn').style.display = enVisible ? '' : 'none';
+
+  // Button text
+  document.getElementById('lang-button').innerText = enVisible ? 'English' : '中文';
+}
 </script>
 </body>
 </html>
