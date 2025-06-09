@@ -52,7 +52,9 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}
     }
-    @media print { #pdf-button, #lang-button, nav, header, #particles-js { display: none; } }
+    @media print {
+      #pdf-button, #lang-button, nav, #particles-js { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -66,7 +68,6 @@
   <p id="contact-cn" style="display:none;">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
 </header>
 
-<!-- ======= NAVIGATION，所有ID严格唯一 ======= -->
 <nav>
   <!-- English -->
   <a href="#edu-en" id="nav-edu-en">Education</a>
@@ -85,7 +86,6 @@
 </nav>
 
 <div class="container">
-  <!-- ENGLISH VERSION -->
   <div id="content-en">
     <div class="section" id="edu-en">
       <h2 class="section-title">Education</h2>
@@ -131,7 +131,6 @@
       </div>
     </div>
   </div>
-  <!-- CHINESE VERSION -->
   <div id="content-cn" style="display:none;">
     <div class="section" id="edu-cn">
       <h2 class="section-title">教育背景</h2>
@@ -214,7 +213,6 @@ particlesJS("particles-js", {
   retina_detect: true
 });
 
-// Language toggle
 function toggleLang() {
   let isEnglish = document.getElementById('content-en').style.display !== 'none';
 
@@ -228,7 +226,6 @@ function toggleLang() {
   document.getElementById('contact-en').style.display = isEnglish ? 'none' : '';
   document.getElementById('contact-cn').style.display = isEnglish ? '' : 'none';
 
-  // Navigation
   let navs = [
     'nav-edu', 'nav-interest', 'nav-pub', 'nav-conf', 'nav-internship', 'nav-skills'
   ];
@@ -237,7 +234,6 @@ function toggleLang() {
     document.getElementById(id+'-cn').style.display = isEnglish ? '' : 'none';
   });
 
-  // Button text
   document.getElementById('lang-button').innerText = isEnglish ? 'English' : '中文';
 }
 </script>
