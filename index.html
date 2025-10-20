@@ -273,7 +273,7 @@
             font-size: 14px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            z-index: 999;
+            z-index: 1001; /* 确保在导航栏之上 */
             transition: all 0.3s ease;
         }
         
@@ -337,6 +337,7 @@
             align-items: center;
             gap: 2rem;
             margin-bottom: 1.5rem;
+            flex-wrap: wrap; /* 允许换行 */
         }
         
         .hero-title {
@@ -349,7 +350,7 @@
         }
         
         /* 中文行楷字体样式 */
-        .hero-title .chinese, .logo.chinese {
+        .hero-title.chinese, .logo.chinese, .hero-title .chinese {
             font-family: 'ZCOOL XiaoWei', 'KaiTi', '楷体', serif;
             font-weight: 400;
             letter-spacing: 0.05em;
@@ -614,6 +615,7 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                justify-content: center;
             }
             
             .hero-avatar {
@@ -875,7 +877,10 @@
 
             createParticle(x, y) {
                 if (this.particles.length >= this.maxParticles) {
-                    this.particles.shift();
+                    const removed = this.particles.shift();
+                    if (removed && removed.element.parentNode) {
+                        removed.element.parentNode.removeChild(removed.element);
+                    }
                 }
 
                 const particle = document.createElement('div');
