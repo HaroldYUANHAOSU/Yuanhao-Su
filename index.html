@@ -1,241 +1,1047 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yuanhao Su - CV / 个人简历</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box;}
-    body {
-      font-family: "Microsoft YaHei", "Arial", sans-serif;
-      background: linear-gradient(to bottom, #f4f7fa, #eaf4ff);
-      color: #2d3436;
-    }
-    #particles-js { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
-    header {
-      position: relative; padding: 120px 20px 70px; color: white; text-align: center;
-      background-color: #1e1e2f; overflow: hidden;
-    }
-    .header-bg { position: absolute; top: 50%; left: 0; width: 100%; height: 100%; background: url('background.jpg') center center no-repeat; background-size: cover; transform: translateY(-50%); z-index: 0; opacity: 0.3;}
-    header h1 { font-size: 3em; margin-bottom: 10px; position: relative; z-index: 2; animation: pulseGlow 2s infinite ease-in-out;}
-    header p { font-size: 1.1em; position: relative; z-index: 2; animation: fadeInUp 1s ease;}
-    nav {
-      position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-      display: flex; justify-content: center; gap: 30px; padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 1000;
-    }
-    nav a { text-decoration: none; color: #333; font-weight: bold; transition: all 0.3s ease; padding: 6px 12px; border-radius: 5px;}
-    nav a:hover { color: #fff; background: linear-gradient(120deg, #6c5ce7, #a29bfe); box-shadow: 0 2px 8px rgba(108, 92, 231, 0.5);}
-    .container {
-      max-width: 1100px; margin: 40px auto; padding: 40px;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.08);
-      animation: fadeIn 0.6s ease;
-    }
-    .section { margin-bottom: 50px; border-left: 6px solid #a29bfe; padding-left: 20px; background: linear-gradient(135deg, #ffffff, #f0f4ff); border-radius: 8px; padding-top: 20px; padding-bottom: 20px;}
-    .section-title { font-size: 1.8em; color: #4b4bff; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid; border-image: linear-gradient(to right, #6c5ce7, #a29bfe) 1; text-shadow: 1px 1px 3px rgba(100, 100, 255, 0.2);}
-    .item-title { display: flex; justify-content: space-between; font-weight: bold; color: #2c3e50; margin-bottom: 5px;}
-    .publication-item { margin-bottom: 10px; padding-left: 20px; position: relative;}
-    .publication-item::before { content: "\2022"; position: absolute; left: 0; color: #6c5ce7;}
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;}
-    .skill-category { background: #f9f9f9; padding: 15px; border-radius: 6px; transition: 0.3s ease;}
-    .skill-category:hover { background: linear-gradient(to right, #74b9ff, #a29bfe); color: white; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
-    #pdf-button, #lang-button {
-      position: fixed; right: 20px; background: linear-gradient(45deg, #6c5ce7, #00cec9); color: white; border: none;
-      border-radius: 25px; padding: 12px 20px; font-size: 14px; cursor: pointer;
-      animation: glowing 1.5s infinite alternate; box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 999;
-    }
-    #pdf-button { bottom: 20px;}
-    #lang-button { top: 20px;}
-    @keyframes glowing { 0% { box-shadow: 0 0 5px #6c5ce7;} 100% { box-shadow: 0 0 20px #00cec9;}}
-    @keyframes pulseGlow { 0% { text-shadow: 0 0 10px #a29bfe;} 50% { text-shadow: 0 0 20px #6c5ce7;} 100% { text-shadow: 0 0 10px #a29bfe;}}
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}}
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);}
-    }
-    @media print {
-      #pdf-button, #lang-button, nav, #particles-js { display: none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuanhao Su - Personal Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* 背景渐变 */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, #1a1a2e 0%, #16213e 25%, #0f0f23 50%, #000000 100%);
+            z-index: -2;
+        }
+        
+        /* 极光背景效果 */
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.6;
+            filter: blur(100px);
+        }
+        
+        .aurora-bg::before,
+        .aurora-bg::after {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            animation: aurora-flow 25s infinite linear alternate;
+        }
+        
+        .aurora-bg::before {
+            background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%);
+            top: -20%;
+            left: -20%;
+        }
+        
+        .aurora-bg::after {
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%);
+            bottom: -20%;
+            right: -20%;
+            animation-delay: -12.5s;
+            animation-direction: alternate-reverse;
+        }
+        
+        @keyframes aurora-flow {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            100% {
+                transform: translate(100px, 50px) rotate(180deg) scale(1.2);
+            }
+        }
+        
+        /* 漂浮几何图形 */
+        .geometric-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 20%;
+            opacity: 0.15;
+            animation: float-rotate 30s infinite linear alternate;
+        }
+        
+        .shape-1 {
+            width: 150px; 
+            height: 150px;
+            background: linear-gradient(45deg, #8ec5fc, #e0c3fc);
+            top: 10%; 
+            left: 15%;
+            animation-duration: 35s;
+        }
+        
+        .shape-2 {
+            width: 80px; 
+            height: 80px;
+            background: linear-gradient(45deg, #e0c3fc, #9bb5ff);
+            top: 60%; 
+            left: 70%;
+            animation-duration: 28s;
+            animation-delay: -5s;
+        }
+        
+        .shape-3 {
+            width: 0; 
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid #a8edea;
+            background-color: transparent !important;
+            border-radius: 0;
+            top: 30%; 
+            left: 40%;
+            animation-duration: 40s;
+            animation-delay: -15s;
+        }
+        
+        .shape-4 {
+            width: 120px; 
+            height: 120px;
+            background: linear-gradient(45deg, #f0e68c, #96fbc4);
+            top: 75%; 
+            left: 10%;
+            border-radius: 50%;
+            animation-duration: 32s;
+            animation-delay: -10s;
+        }
+        
+        .shape-5 {
+            width: 100px; 
+            height: 100px;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            top: 45%; 
+            left: 85%;
+            border-radius: 30%;
+            animation-duration: 38s;
+            animation-delay: -20s;
+        }
+        
+        @keyframes float-rotate {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            100% {
+                transform: translateY(-60px) rotate(360deg) scale(1.15);
+            }
+        }
+        
+        /* 鼠标粒子特效 */
+        .mouse-particle {
+            pointer-events: none;
+            position: fixed;
+            border-radius: 50%;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+        }
+        
+        .particle-trail {
+            position: fixed;
+            pointer-events: none;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 9998;
+            animation: particle-fade 1s ease-out forwards;
+        }
+        
+        @keyframes particle-fade {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.2);
+            }
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffffff;
+            background: rgba(99, 102, 241, 0.1);
+        }
+        
+        /* 语言切换按钮 */
+        .lang-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #6366f1, #00cec9);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* PDF导出按钮 */
+        .pdf-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #6366f1, #00cec9);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        .pdf-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* 主要内容 */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero区域 */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-content {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .contact-info {
+            font-size: 1rem;
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+        
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: #6366f1;
+        }
+        
+        /* Typed.js 打字机效果样式 */
+        .typed-motto {
+            font-style: italic;
+            font-size: 1.6rem;
+            margin: 20px 0;
+            min-height: 40px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'EB Garamond', 'Georgia', serif;
+            font-weight: 500;
+            text-align: left;
+            letter-spacing: 0.02em;
+            line-height: 1.4;
+        }
+        
+        .typed-cursor {
+            color: #6366f1 !important;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* 社交媒体链接 */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50px;
+            height: 50px;
+            padding: 0 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .social-link i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .social-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-link.scholar:hover {
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.3), rgba(52, 168, 83, 0.3));
+            box-shadow: 0 10px 25px rgba(66, 133, 244, 0.3);
+        }
+        
+        /* 信息卡片 */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover .card-icon {
+            transform: rotateY(180deg) scale(1.1);
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .card-content {
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+        
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card-content li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .card-content li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+        }
+        
+        /* 高亮名字 */
+        strong u {
+            color: #cbd5e1 !important;
+            font-weight: 700 !important;
+            text-decoration: underline !important;
+            text-decoration-color: #64748b !important;
+            text-decoration-thickness: 1.5px !important;
+            text-underline-offset: 2px !important;
+            background: linear-gradient(135deg, rgba(100, 116, 139, 0.12), rgba(148, 163, 184, 0.12)) !important;
+            padding: 2px 4px !important;
+            border-radius: 4px !important;
+        }
+        
+        strong u:hover {
+            color: #e2e8f0 !important;
+            background: linear-gradient(135deg, rgba(100, 116, 139, 0.2), rgba(148, 163, 184, 0.2)) !important;
+            text-decoration-color: #475569 !important;
+        }
+        
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            .lang-button, .pdf-button, .navbar, .geometric-bg, .aurora-bg {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .info-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="particles-js"></div>
-<button id="lang-button" onclick="toggleLang()">中文</button>
-<header>
-  <div class="header-bg"></div>
-  <h1 id="name-en">Yuanhao Su</h1>
-  <h1 id="name-cn" style="display:none;">苏元皓</h1>
-  <p id="contact-en">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
-  <p id="contact-cn" style="display:none;">📧 1446585363@qq.com ｜ 📱 +86 13306900585</p>
-</header>
-
-<nav>
-  <!-- English -->
-  <a href="#edu-en" id="nav-edu-en">Education</a>
-  <a href="#interest-en" id="nav-interest-en">Research Interests</a>
-  <a href="#pub-en" id="nav-pub-en">Publications</a>
-  <a href="#conf-en" id="nav-conf-en">Competitions & Achievements</a>
-  <a href="#internship-en" id="nav-internship-en">Internship Experience</a>
-  <a href="#skills-en" id="nav-skills-en">Skills</a>
-  <!-- Chinese -->
-  <a href="#edu-cn" id="nav-edu-cn" style="display:none;">教育背景</a>
-  <a href="#interest-cn" id="nav-interest-cn" style="display:none;">研究兴趣</a>
-  <a href="#pub-cn" id="nav-pub-cn" style="display:none;">发表论文</a>
-  <a href="#conf-cn" id="nav-conf-cn" style="display:none;">比赛与成果</a>
-  <a href="#internship-cn" id="nav-internship-cn" style="display:none;">实习经历</a>
-  <a href="#skills-cn" id="nav-skills-cn" style="display:none;">技能专长</a>
-</nav>
-
-<div class="container">
-  <div id="content-en">
-    <div class="section" id="edu-en">
-      <h2 class="section-title">Education</h2>
-      <div class="item">
-        <div class="item-title"><span>Fuzhou University</span><span>Fuzhou, China</span></div>
-        <div>BSc in Software Engineering (2023 - 2027)</div>
-      </div>
+    <!-- 背景效果 -->
+    <div class="bg-gradient"></div>
+    <div class="aurora-bg"></div>
+    <div class="geometric-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
     </div>
-    <div class="section" id="interest-en">
-      <h2 class="section-title">Research Interests</h2>
-      <div class="item">I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.</div>
-    </div>
-    <div class="section" id="pub-en">
-      <h2 class="section-title">Publications</h2>
-      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (Revise)</div>
-      <div class="publication-item">Su, Y., Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <i>Transactions on Geoscience and Remote Sensing</i>.(Under Review)</div>
-    </div>
-    <div class="section" id="conf-en">
-      <h2 class="section-title">Competitions & Achievements</h2>
-      <div class="publication-item">Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</div>
-      <div class="publication-item">Third Prize, 14th Cross-Strait Information Service Innovation Competition & 18th Fujian Provincial Computer Software Design Competition, 2024</div>
-      <div class="publication-item">Third Prize, 16th China College Student Service Outsourcing Innovation and Entrepreneurship Competition (East China Division), 2025</div>
-      <div class="publication-item">Third Prize, 11th National College Students Statistical Modeling Competition, 2025</div>
-      <div class="publication-item">Second Prize, China Collegiate Computer Design Competition, 2025</div>
-      <div class="publication-item">Software Copyright: 怡伴APP1.0, Registration No. 2025SR0689058, 2025</div>
-    </div>
-    <div class="section" id="internship-en">
-      <h2 class="section-title">Internship Experience</h2>
-      <div class="item">
-        <div class="item-title"><span>linewell Co., Ltd.</span><span>Jul. 2024 – Aug. 2024</span></div>
-        <div><strong>Intern Developer</strong></div>
-        <div>
-          Responsible for providing and developing data reporting interfaces for the Smart JiangLe Project, including parking lot vacancy update APIs, off-street parking entry/exit record interfaces, and on-street parking entry/exit record interfaces.
+    
+    <!-- 语言切换按钮 -->
+    <button class="lang-button" onclick="toggleLanguage()">
+        <span id="lang-text">中文</span>
+    </button>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logo">Yuanhao Su</a>
+            <ul class="nav-menu">
+                <li><a href="#about" id="nav-about">About Me</a></li>
+                <li><a href="#education" id="nav-education">Education</a></li>
+                <li><a href="#research" id="nav-research">Research</a></li>
+                <li><a href="#publications" id="nav-publications">Publications</a></li>
+                <li><a href="#achievements" id="nav-achievements">Achievements</a></li>
+                <li><a href="#skills" id="nav-skills">Skills</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-    <div class="section" id="skills-en">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category"><strong>English</strong><ul><li>CET-4: 537</li><li>CET-6: 497</li></ul></div>
-        <div class="skill-category"><strong>Programming</strong><ul><li>Java</li><li>Python</li></ul></div>
-        <div class="skill-category"><strong>Sports</strong><ul><li>Table Tennis</li><li>Tennis</li></ul></div>
-      </div>
-    </div>
-  </div>
-  <div id="content-cn" style="display:none;">
-    <div class="section" id="edu-cn">
-      <h2 class="section-title">教育背景</h2>
-      <div class="item">
-        <div class="item-title"><span>福州大学</span><span>福州，中国</span></div>
-        <div>软件工程 本科（2023 - 2027）</div>
-      </div>
-    </div>
-    <div class="section" id="interest-cn">
-      <h2 class="section-title">研究兴趣</h2>
-      <div class="item">我的研究兴趣包括跨模态检索方法，尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时，对时空数据的建模与分析也有浓厚兴趣，关注数据随时间和空间变化的建模与理解。</div>
-    </div>
-    <div class="section" id="pub-cn">
-      <h2 class="section-title">发表论文</h2>
-      <div class="publication-item">Su, Y., Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <i>International Journal of Applied Earth Observation and Geoinformation</i>. (修改中)</div>
-      <div class="publication-item">Su, Y., Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <i>Transactions on Geoscience and Remote Sensing</i>.(审核中)</div>
-    </div>
-    <div class="section" id="conf-cn">
-      <h2 class="section-title">比赛与成果</h2>
-      <div class="publication-item">中国高校计算机大赛移动应用创新赛（华东赛区）二等奖，2024</div>
-      <div class="publication-item">第十四届海峡两岸信息服务创新大赛 暨福建省第十八届计算机软件设计大赛 三等奖，2024</div>
-      <div class="publication-item">第十六届中国大学生服务外包创新创业大赛（华东赛区）三等奖，2025</div>
-      <div class="publication-item">第十一届全国大学生统计建模大赛三等奖，2025</div>
-      <div class="publication-item">中国大学生计算机设计大赛二等奖，2025</div>
-      <div class="publication-item">软件著作权：怡伴APP1.0，登记号：2025SR0689058，2025</div>
-    </div>
-    <div class="section" id="internship-cn">
-      <h2 class="section-title">实习经历</h2>
-      <div class="item">
-        <div class="item-title"><span>南威软件股份有限公司</span><span>2024.7 – 2024.8</span></div>
-        <div><strong>开发工程师实习生</strong></div>
-        <div>
-          为智慧将乐项目提供停车场余位更新接口及路外停车场入场记录、路内停车场入场记录、路外停车场出场记录、路内停车场出场记录等数据上报接口开发。
-        </div>
-      </div>
-    </div>
-    <div class="section" id="skills-cn">
-      <h2 class="section-title">技能专长</h2>
-      <div class="skills-grid">
-        <div class="skill-category"><strong>英语</strong><ul><li>四级：537</li><li>六级：497</li></ul></div>
-        <div class="skill-category"><strong>编程</strong><ul><li>Java</li><li>Python</li></ul></div>
-        <div class="skill-category"><strong>体育</strong><ul><li>乒乓球</li><li>网球</li></ul></div>
-      </div>
-    </div>
-  </div>
-</div>
-<button id="pdf-button" onclick="window.print()">📄 Export as PDF</button>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    color: { value: "#a29bfe" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5 },
-    size: { value: 3 },
-    line_linked: {
-      enable: true,
-      distance: 120,
-      color: "#6c5ce7",
-      opacity: 0.4,
-      width: 1
-    },
-    move: { enable: true, speed: 1.5 }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: { enable: true, mode: "grab" },
-      onclick: { enable: false },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 140,
-        line_linked: { opacity: 0.5 }
-      }
-    }
-  },
-  retina_detect: true
-});
+    </nav>
+    
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <!-- Hero区域 -->
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">Yuanhao Su</h1>
+                <p class="hero-subtitle" id="hero-subtitle">BSc Student in Software Engineering</p>
+                
+                <!-- Typed.js 打字机效果 -->
+                <div class="typed-motto">
+                    <span id="motto"></span>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div class="contact-info">
+                    <div><i class="fas fa-envelope"></i>1446585363@qq.com</div>
+                    <div><i class="fas fa-phone"></i>+86 13306900585</div>
+                </div>
+                
+                <p class="hero-description" id="hero-desc">
+                    I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.
+                </p>
+                
+                <!-- Google Scholar链接 -->
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=_tfdzEgAAAAJ&hl=en&oi=ao" target="_blank" class="social-link scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="social-text">Google Scholar</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 教育背景 -->
+        <section id="education">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="card-title" id="edu-title">Education</h3>
+                    <div class="card-content" id="edu-content">
+                        <strong>Fuzhou University</strong><br>
+                        BSc in Software Engineering<br>
+                        2023 - 2027<br>
+                        Fuzhou, China
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 研究兴趣 -->
+        <section id="research">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="card-title" id="research-title">Research Interests</h3>
+                    <div class="card-content" id="research-content">
+                        <ul>
+                            <li>Cross-modal retrieval methods</li>
+                            <li>Multi-modal information alignment (text, images, audio)</li>
+                            <li>Spatiotemporal data modeling and analysis</li>
+                            <li>Data changes over time and locations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 发表论文 -->
+        <section id="publications">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="card-title" id="pub-title">Publications</h3>
+                    <div class="card-content" id="pub-content">
+                        <p style="margin-bottom: 1rem;">
+                            <strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). 
+                            Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. 
+                            <em>International Journal of Applied Earth Observation and Geoinformation</em>. (Revise)
+                        </p>
+                        <p>
+                            <strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). 
+                            FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. 
+                            <em>Transactions on Geoscience and Remote Sensing</em>. (Under Review)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 比赛与成果 -->
+        <section id="achievements">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="card-title" id="achieve-title">Competitions & Achievements</h3>
+                    <div class="card-content" id="achieve-content">
+                        <ul>
+                            <li>Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</li>
+                            <li>Third Prize, 14th Cross-Strait Information Service Innovation Competition, 2024</li>
+                            <li>Third Prize, 16th China College Student Service Outsourcing Competition, 2025</li>
+                            <li>Third Prize, 11th National College Students Statistical Modeling Competition, 2025</li>
+                            <li>Second Prize, China Collegiate Computer Design Competition, 2025</li>
+                            <li>Software Copyright: 怡伴APP1.0, Registration No. 2025SR0689058, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="card-title" id="intern-title">Internship Experience</h3>
+                    <div class="card-content" id="intern-content">
+                        <strong>linewell Co., Ltd.</strong><br>
+                        Intern Developer | Jul. 2024 – Aug. 2024<br><br>
+                        Responsible for providing and developing data reporting interfaces for the Smart JiangLe Project, including parking lot vacancy update APIs, off-street parking entry/exit record interfaces, and on-street parking entry/exit record interfaces.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 技能专长 -->
+        <section id="skills">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="card-title" id="skill-lang-title">English</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>CET-4: 537</li>
+                            <li>CET-6: 497</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title" id="skill-prog-title">Programming</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="card-title" id="skill-sport-title">Sports</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li>Table Tennis</li>
+                            <li>Tennis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- PDF导出按钮 -->
+    <button class="pdf-button" onclick="window.print()">
+        <i class="fas fa-file-pdf"></i> <span id="pdf-text">Export as PDF</span>
+    </button>
+    
+    <script>
+        // 鼠标粒子特效系统
+        class ParticleSystem {
+            constructor() {
+                this.particles = [];
+                this.maxParticles = 100;
+                this.init();
+            }
 
-function toggleLang() {
-  let isEnglish = document.getElementById('content-en').style.display !== 'none';
+            init() {
+                document.addEventListener('mousemove', (e) => {
+                    this.createParticle(e.clientX, e.clientY);
+                    this.createTrail(e.clientX, e.clientY);
+                });
+                this.animate();
+            }
 
-  // Main content
-  document.getElementById('content-en').style.display = isEnglish ? 'none' : '';
-  document.getElementById('content-cn').style.display = isEnglish ? '' : 'none';
+            createParticle(x, y) {
+                if (this.particles.length >= this.maxParticles) {
+                    this.particles.shift();
+                }
 
-  // Header
-  document.getElementById('name-en').style.display = isEnglish ? 'none' : '';
-  document.getElementById('name-cn').style.display = isEnglish ? '' : 'none';
-  document.getElementById('contact-en').style.display = isEnglish ? 'none' : '';
-  document.getElementById('contact-cn').style.display = isEnglish ? '' : 'none';
+                const particle = document.createElement('div');
+                particle.className = 'mouse-particle';
+                
+                const size = Math.random() * 8 + 4;
+                const hue = Math.random() * 60 + 200;
+                const brightness = Math.random() * 50 + 50;
+                
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.background = `hsla(${hue}, 80%, ${brightness}%, 0.8)`;
+                particle.style.boxShadow = `0 0 20px hsla(${hue}, 80%, ${brightness}%, 0.6)`;
+                
+                document.body.appendChild(particle);
+                
+                const velocity = {
+                    x: (Math.random() - 0.5) * 4,
+                    y: (Math.random() - 0.5) * 4
+                };
+                
+                this.particles.push({
+                    element: particle,
+                    x: x,
+                    y: y,
+                    velocity: velocity,
+                    life: 1.0,
+                    decay: Math.random() * 0.02 + 0.01
+                });
+            }
 
-  let navs = [
-    'nav-edu', 'nav-interest', 'nav-pub', 'nav-conf', 'nav-internship', 'nav-skills'
-  ];
-  navs.forEach(id => {
-    document.getElementById(id+'-en').style.display = isEnglish ? 'none' : '';
-    document.getElementById(id+'-cn').style.display = isEnglish ? '' : 'none';
-  });
+            createTrail(x, y) {
+                const trail = document.createElement('div');
+                trail.className = 'particle-trail';
+                trail.style.left = x + 'px';
+                trail.style.top = y + 'px';
+                
+                document.body.appendChild(trail);
+                
+                setTimeout(() => {
+                    if (trail.parentNode) {
+                        trail.parentNode.removeChild(trail);
+                    }
+                }, 1000);
+            }
 
-  document.getElementById('lang-button').innerText = isEnglish ? 'English' : '中文';
-}
-</script>
+            animate() {
+                this.particles.forEach((particle, index) => {
+                    particle.x += particle.velocity.x;
+                    particle.y += particle.velocity.y;
+                    particle.life -= particle.decay;
+                    
+                    particle.element.style.left = particle.x + 'px';
+                    particle.element.style.top = particle.y + 'px';
+                    particle.element.style.opacity = particle.life;
+                    
+                    if (particle.life <= 0) {
+                        if (particle.element.parentNode) {
+                            particle.element.parentNode.removeChild(particle.element);
+                        }
+                        this.particles.splice(index, 1);
+                    }
+                });
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // 语言切换数据
+        const translations = {
+            en: {
+                langText: '中文',
+                logo: 'Yuanhao Su',
+                navAbout: 'About Me',
+                navEducation: 'Education',
+                navResearch: 'Research',
+                navPublications: 'Publications',
+                navAchievements: 'Achievements',
+                navSkills: 'Skills',
+                heroTitle: 'Yuanhao Su',
+                heroSubtitle: 'BSc Student in Software Engineering',
+                heroDesc: 'I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.',
+                eduTitle: 'Education',
+                eduContent: '<strong>Fuzhou University</strong><br>BSc in Software Engineering<br>2023 - 2027<br>Fuzhou, China',
+                researchTitle: 'Research Interests',
+                researchContent: '<ul><li>Cross-modal retrieval methods</li><li>Multi-modal information alignment (text, images, audio)</li><li>Spatiotemporal data modeling and analysis</li><li>Data changes over time and locations</li></ul>',
+                pubTitle: 'Publications',
+                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. (Revise)</p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. (Under Review)</p>',
+                achieveTitle: 'Competitions & Achievements',
+                achieveContent: '<ul><li>Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</li><li>Third Prize, 14th Cross-Strait Information Service Innovation Competition, 2024</li><li>Third Prize, 16th China College Student Service Outsourcing Competition, 2025</li><li>Third Prize, 11th National College Students Statistical Modeling Competition, 2025</li><li>Second Prize, China Collegiate Computer Design Competition, 2025</li><li>Software Copyright: 怡伴APP1.0, Registration No. 2025SR0689058, 2025</li></ul>',
+                internTitle: 'Internship Experience',
+                internContent: '<strong>linewell Co., Ltd.</strong><br>Intern Developer | Jul. 2024 – Aug. 2024<br><br>Responsible for providing and developing data reporting interfaces for the Smart JiangLe Project, including parking lot vacancy update APIs, off-street parking entry/exit record interfaces, and on-street parking entry/exit record interfaces.',
+                skillLangTitle: 'English',
+                skillProgTitle: 'Programming',
+                skillSportTitle: 'Sports',
+                pdfText: 'Export as PDF'
+            },
+            zh: {
+                langText: 'English',
+                logo: '苏元皓',
+                navAbout: '关于我',
+                navEducation: '教育背景',
+                navResearch: '研究兴趣',
+                navPublications: '发表论文',
+                navAchievements: '成就荣誉',
+                navSkills: '技能专长',
+                heroTitle: '苏元皓',
+                heroSubtitle: '软件工程本科生',
+                heroDesc: '我的研究兴趣包括跨模态检索方法，尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时，对时空数据的建模与分析也有浓厚兴趣，关注数据随时间和空间变化的建模与理解。',
+                eduTitle: '教育背景',
+                eduContent: '<strong>福州大学</strong><br>软件工程 本科<br>2023 - 2027<br>福州，中国',
+                researchTitle: '研究兴趣',
+                researchContent: '<ul><li>跨模态检索方法</li><li>多模态信息对齐（文本、图像、音频）</li><li>时空数据建模与分析</li><li>数据随时间和位置的变化</li></ul>',
+                pubTitle: '发表论文',
+                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. (修改中)</p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. (审核中)</p>',
+                achieveTitle: '比赛与成果',
+                achieveContent: '<ul><li>中国高校计算机大赛移动应用创新赛（华东赛区）二等奖，2024</li><li>第十四届海峡两岸信息服务创新大赛 暨福建省第十八届计算机软件设计大赛 三等奖，2024</li><li>第十六届中国大学生服务外包创新创业大赛（华东赛区）三等奖，2025</li><li>第十一届全国大学生统计建模大赛三等奖，2025</li><li>中国大学生计算机设计大赛二等奖，2025</li><li>软件著作权：怡伴APP1.0，登记号：2025SR0689058，2025</li></ul>',
+                internTitle: '实习经历',
+                internContent: '<strong>南威软件股份有限公司</strong><br>开发工程师实习生 | 2024.7 – 2024.8<br><br>为智慧将乐项目提供停车场余位更新接口及路外停车场入场记录、路内停车场入场记录、路外停车场出场记录、路内停车场出场记录等数据上报接口开发。',
+                skillLangTitle: '英语',
+                skillProgTitle: '编程',
+                skillSportTitle: '体育',
+                pdfText: '导出PDF'
+            }
+        };
+
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            const t = translations[currentLang];
+            
+            document.getElementById('lang-text').textContent = t.langText;
+            document.getElementById('logo').textContent = t.logo;
+            document.getElementById('nav-about').textContent = t.navAbout;
+            document.getElementById('nav-education').textContent = t.navEducation;
+            document.getElementById('nav-research').textContent = t.navResearch;
+            document.getElementById('nav-publications').textContent = t.navPublications;
+            document.getElementById('nav-achievements').textContent = t.navAchievements;
+            document.getElementById('nav-skills').textContent = t.navSkills;
+            document.getElementById('hero-title').textContent = t.heroTitle;
+            document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+            document.getElementById('hero-desc').textContent = t.heroDesc;
+            document.getElementById('edu-title').textContent = t.eduTitle;
+            document.getElementById('edu-content').innerHTML = t.eduContent;
+            document.getElementById('research-title').textContent = t.researchTitle;
+            document.getElementById('research-content').innerHTML = t.researchContent;
+            document.getElementById('pub-title').textContent = t.pubTitle;
+            document.getElementById('pub-content').innerHTML = t.pubContent;
+            document.getElementById('achieve-title').textContent = t.achieveTitle;
+            document.getElementById('achieve-content').innerHTML = t.achieveContent;
+            document.getElementById('intern-title').textContent = t.internTitle;
+            document.getElementById('intern-content').innerHTML = t.internContent;
+            document.getElementById('skill-lang-title').textContent = t.skillLangTitle;
+            document.getElementById('skill-prog-title').textContent = t.skillProgTitle;
+            document.getElementById('skill-sport-title').textContent = t.skillSportTitle;
+            document.getElementById('pdf-text').textContent = t.pdfText;
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 启动粒子系统
+            new ParticleSystem();
+            
+            // 初始化Typed.js打字机效果
+            if (typeof Typed !== 'undefined') {
+                new Typed('#motto', {
+                    strings: [
+                        "Losing Ground Now, Gaining Miles Tomorrow!",
+                        "不争一时先后，但求源源不绝。"
+                    ],
+                    typeSpeed: 45,
+                    backSpeed: 35,
+                    loop: true,
+                    startDelay: 500,
+                    backDelay: 3000,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            }
+            
+            // 导航栏滚动效果
+            function handleNavbarScroll() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+            
+            handleNavbarScroll();
+            window.addEventListener('scroll', handleNavbarScroll);
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
