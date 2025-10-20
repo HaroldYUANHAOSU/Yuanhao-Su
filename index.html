@@ -60,13 +60,13 @@
         }
         
         .aurora-bg::before {
-            background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 149, 62, 0.7) 0%, transparent 70%);
             top: -20%;
             left: -20%;
         }
         
         .aurora-bg::after {
-            background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 201, 62, 0.6) 0%, transparent 70%);
             bottom: -20%;
             right: -20%;
             animation-delay: -12.5s;
@@ -180,7 +180,7 @@
             pointer-events: none;
             width: 4px;
             height: 4px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 149, 62, 0.8) 0%, transparent 70%);
             border-radius: 50%;
             z-index: 9998;
             animation: particle-fade 1s ease-out forwards;
@@ -227,7 +227,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(45deg, #FF953E, #FFC93E);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -257,7 +257,7 @@
         
         .nav-menu a:hover {
             color: #ffffff;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(255, 149, 62, 0.1);
         }
         
         /* 语言切换按钮 */
@@ -265,7 +265,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: linear-gradient(45deg, #6366f1, #00cec9);
+            background: linear-gradient(45deg, #FF953E, #FFC93E);
             color: white;
             border: none;
             border-radius: 25px;
@@ -287,7 +287,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: linear-gradient(45deg, #6366f1, #00cec9);
+            background: linear-gradient(45deg, #FF953E, #FFC93E);
             color: white;
             border: none;
             border-radius: 25px;
@@ -349,7 +349,7 @@
         }
         
         /* 中文行楷字体样式 */
-        .hero-title.chinese {
+        .hero-title .chinese, .logo.chinese {
             font-family: 'ZCOOL XiaoWei', 'KaiTi', '楷体', serif;
             font-weight: 400;
             letter-spacing: 0.05em;
@@ -360,8 +360,8 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid rgba(99, 102, 241, 0.5);
-            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+            border: 4px solid rgba(255, 149, 62, 0.5);
+            box-shadow: 0 8px 30px rgba(255, 149, 62, 0.3);
             object-fit: cover;
             transition: all 0.4s ease;
             flex-shrink: 0;
@@ -369,8 +369,8 @@
         
         .hero-avatar:hover {
             transform: scale(1.08) rotate(5deg);
-            border-color: rgba(99, 102, 241, 0.8);
-            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.5);
+            border-color: rgba(255, 149, 62, 0.8);
+            box-shadow: 0 12px 40px rgba(255, 149, 62, 0.5);
         }
         
         .hero-subtitle {
@@ -397,7 +397,7 @@
         
         .contact-info i {
             margin-right: 0.5rem;
-            color: #6366f1;
+            color: #FF953E;
         }
         
         /* Typed.js 打字机效果样式 */
@@ -406,7 +406,7 @@
             font-size: 1.6rem;
             margin: 20px 0;
             min-height: 40px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+            background: linear-gradient(90deg, #FF953E, #FFC93E, #E67E22);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -418,7 +418,7 @@
         }
         
         .typed-cursor {
-            color: #6366f1 !important;
+            color: #FF953E !important;
             font-weight: bold;
             animation: blink 1s infinite;
         }
@@ -472,7 +472,7 @@
             transform: translateY(-5px) scale(1.05);
             color: #ffffff;
             background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(99, 102, 241, 0.5);
+            border-color: rgba(255, 149, 62, 0.5);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         
@@ -506,20 +506,20 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 149, 62, 0.5), transparent);
         }
         
         .info-card:hover {
             transform: translateY(-10px) scale(1.02);
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(255, 149, 62, 0.3);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
         
         .card-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(45deg, #FF953E, #FFC93E);
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -560,7 +560,7 @@
             content: '▸';
             position: absolute;
             left: 0;
-            color: #6366f1;
+            color: #FF953E;
         }
         
         /* 高亮名字 */
@@ -650,7 +650,6 @@
     </style>
 </head>
 <body>
-    <!-- 背景效果 -->
     <div class="bg-gradient"></div>
     <div class="aurora-bg"></div>
     <div class="geometric-bg">
@@ -661,12 +660,10 @@
         <div class="shape shape-5"></div>
     </div>
     
-    <!-- 语言切换按钮 -->
     <button class="lang-button" onclick="toggleLanguage()">
         <span id="lang-text">中文</span>
     </button>
     
-    <!-- 导航栏 -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo" id="logo">Yuanhao Su</a>
@@ -681,14 +678,11 @@
         </div>
     </nav>
     
-    <!-- 主要内容 -->
     <main class="main-content">
-        <!-- Hero区域 -->
         <section class="hero" id="about">
             <div class="hero-content">
-                <!-- 名字和头像 -->
                 <div class="hero-header">
-                    <h1 class="hero-title" id="hero-title">Yuanhao Su</h1>
+                    <h1 class="hero-title" id="hero-title">Yuanhao Su <span class="chinese">苏元皓</span></h1>
                     <img src="./photo.png" 
                          alt="Profile Photo" 
                          class="hero-avatar">
@@ -696,12 +690,10 @@
                 
                 <p class="hero-subtitle" id="hero-subtitle">BSc Student in Software Engineering</p>
                 
-                <!-- Typed.js 打字机效果 -->
                 <div class="typed-motto">
                     <span id="motto"></span>
                 </div>
                 
-                <!-- 联系方式 -->
                 <div class="contact-info">
                     <div><i class="fas fa-envelope"></i>1446585363@qq.com</div>
                     <div><i class="fas fa-phone"></i>+86 13306900585</div>
@@ -711,7 +703,6 @@
                     I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.
                 </p>
                 
-                <!-- Google Scholar链接 -->
                 <div class="social-links">
                     <a href="https://scholar.google.com/citations?user=_tfdzEgAAAAJ&hl=en&oi=ao" target="_blank" class="social-link scholar">
                         <i class="fas fa-graduation-cap"></i>
@@ -721,7 +712,6 @@
             </div>
         </section>
         
-        <!-- 教育背景 -->
         <section id="education">
             <div class="info-cards">
                 <div class="info-card">
@@ -739,7 +729,6 @@
             </div>
         </section>
         
-        <!-- 研究兴趣 -->
         <section id="research">
             <div class="info-cards">
                 <div class="info-card">
@@ -759,7 +748,6 @@
             </div>
         </section>
         
-        <!-- 发表论文 -->
         <section id="publications">
             <div class="info-cards">
                 <div class="info-card">
@@ -783,7 +771,6 @@
             </div>
         </section>
         
-        <!-- 比赛与成果 -->
         <section id="achievements">
             <div class="info-cards">
                 <div class="info-card">
@@ -817,7 +804,6 @@
             </div>
         </section>
         
-        <!-- 技能专长 -->
         <section id="skills">
             <div class="info-cards">
                 <div class="info-card">
@@ -862,7 +848,6 @@
         </section>
     </main>
     
-    <!-- PDF下载按钮 -->
     <a href="./CV.pdf" 
        class="pdf-button" 
        download 
@@ -897,15 +882,15 @@
                 particle.className = 'mouse-particle';
                 
                 const size = Math.random() * 8 + 4;
-                const hue = Math.random() * 60 + 200;
+                const hue = Math.random() * 30 + 15; // Orange/Yellow hue range
                 const brightness = Math.random() * 50 + 50;
                 
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
-                particle.style.background = `hsla(${hue}, 80%, ${brightness}%, 0.8)`;
-                particle.style.boxShadow = `0 0 20px hsla(${hue}, 80%, ${brightness}%, 0.6)`;
+                particle.style.background = `hsla(${hue}, 90%, ${brightness}%, 0.8)`;
+                particle.style.boxShadow = `0 0 20px hsla(${hue}, 90%, ${brightness}%, 0.6)`;
                 
                 document.body.appendChild(particle);
                 
@@ -972,7 +957,7 @@
                 navPublications: 'Publications',
                 navAchievements: 'Achievements',
                 navSkills: 'Skills',
-                heroTitle: 'Yuanhao Su',
+                heroTitle: 'Yuanhao Su <span class="chinese">苏元皓</span>',
                 heroSubtitle: 'BSc Student in Software Engineering',
                 heroDesc: 'I am interested in cross-modal retrieval methods, especially techniques that connect and align information from different modalities such as text, images, and audio. I also have a strong interest in spatiotemporal data, including the modeling and analysis of data that changes over time and across locations.',
                 eduTitle: 'Education',
@@ -1034,7 +1019,7 @@
             document.getElementById('nav-publications').textContent = t.navPublications;
             document.getElementById('nav-achievements').textContent = t.navAchievements;
             document.getElementById('nav-skills').textContent = t.navSkills;
-            document.getElementById('hero-title').textContent = t.heroTitle;
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
             document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
             document.getElementById('hero-desc').textContent = t.heroDesc;
             document.getElementById('edu-title').textContent = t.eduTitle;
