@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuanhao Su - Personal Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
@@ -282,7 +282,7 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
         
-        /* PDF导出按钮 */
+        /* PDF下载按钮 */
         .pdf-button {
             position: fixed;
             bottom: 20px;
@@ -297,6 +297,10 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             z-index: 999;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .pdf-button:hover {
@@ -327,13 +331,46 @@
             position: relative;
         }
         
+        /* 名字和头像容器 */
+        .hero-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
         .hero-title {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
-            margin-bottom: 1.5rem;
             color: #ffffff;
             font-family: 'Inter', 'Helvetica Neue', sans-serif;
             letter-spacing: -0.02em;
+            transition: all 0.3s ease;
+        }
+        
+        /* 中文行楷字体样式 */
+        .hero-title.chinese {
+            font-family: 'ZCOOL XiaoWei', 'KaiTi', '楷体', serif;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+        
+        /* 头像样式 */
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+            object-fit: cover;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+        }
+        
+        .hero-avatar:hover {
+            transform: scale(1.08) rotate(5deg);
+            border-color: rgba(99, 102, 241, 0.8);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.5);
         }
         
         .hero-subtitle {
@@ -573,6 +610,17 @@
                 gap: 2rem;
             }
             
+            .hero-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .hero-avatar {
+                width: 100px;
+                height: 100px;
+            }
+            
             .info-cards {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -638,7 +686,14 @@
         <!-- Hero区域 -->
         <section class="hero" id="about">
             <div class="hero-content">
-                <h1 class="hero-title" id="hero-title">Yuanhao Su</h1>
+                <!-- 名字和头像 -->
+                <div class="hero-header">
+                    <h1 class="hero-title" id="hero-title">Yuanhao Su</h1>
+                    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/avatar.jpg" 
+                         alt="Profile Photo" 
+                         class="hero-avatar">
+                </div>
+                
                 <p class="hero-subtitle" id="hero-subtitle">BSc Student in Software Engineering</p>
                 
                 <!-- Typed.js 打字机效果 -->
@@ -716,12 +771,12 @@
                         <p style="margin-bottom: 1rem;">
                             <strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). 
                             Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. 
-                            <em>International Journal of Applied Earth Observation and Geoinformation</em>. (Revise)
+                            <em>International Journal of Applied Earth Observation and Geoinformation</em>. 
                         </p>
                         <p>
                             <strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). 
                             FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. 
-                            <em>Transactions on Geoscience and Remote Sensing</em>. (Under Review)
+                            <em>Transactions on Geoscience and Remote Sensing</em>. 
                         </p>
                     </div>
                 </div>
@@ -807,10 +862,14 @@
         </section>
     </main>
     
-    <!-- PDF导出按钮 -->
-    <button class="pdf-button" onclick="window.print()">
-        <i class="fas fa-file-pdf"></i> <span id="pdf-text">Export as PDF</span>
-    </button>
+    <!-- PDF下载按钮 -->
+    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/raw/main/resume.pdf" 
+       class="pdf-button" 
+       download 
+       target="_blank">
+        <i class="fas fa-download"></i> 
+        <span id="pdf-text">Download Resume</span>
+    </a>
     
     <script>
         // 鼠标粒子特效系统
@@ -921,7 +980,7 @@
                 researchTitle: 'Research Interests',
                 researchContent: '<ul><li>Cross-modal retrieval methods</li><li>Multi-modal information alignment (text, images, audio)</li><li>Spatiotemporal data modeling and analysis</li><li>Data changes over time and locations</li></ul>',
                 pubTitle: 'Publications',
-                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. (Revise)</p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. (Under Review)</p>',
+                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. </p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. </p>',
                 achieveTitle: 'Competitions & Achievements',
                 achieveContent: '<ul><li>Second Prize, Mobile Application Innovation (East China), China Collegiate Computing Competition, 2024</li><li>Third Prize, 14th Cross-Strait Information Service Innovation Competition, 2024</li><li>Third Prize, 16th China College Student Service Outsourcing Competition, 2025</li><li>Third Prize, 11th National College Students Statistical Modeling Competition, 2025</li><li>Second Prize, China Collegiate Computer Design Competition, 2025</li><li>Software Copyright: 怡伴APP1.0, Registration No. 2025SR0689058, 2025</li></ul>',
                 internTitle: 'Internship Experience',
@@ -929,7 +988,7 @@
                 skillLangTitle: 'English',
                 skillProgTitle: 'Programming',
                 skillSportTitle: 'Sports',
-                pdfText: 'Export as PDF'
+                pdfText: 'Download Resume'
             },
             zh: {
                 langText: 'English',
@@ -942,21 +1001,21 @@
                 navSkills: '技能专长',
                 heroTitle: '苏元皓',
                 heroSubtitle: '软件工程本科生',
-                heroDesc: '我的研究兴趣包括跨模态检索方法，尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时，对时空数据的建模与分析也有浓厚兴趣，关注数据随时间和空间变化的建模与理解。',
+                heroDesc: '我的研究兴趣包括跨模态检索方法,尤其关注于文本、图像、音频等不同模态信息的关联与对齐技术。同时,对时空数据的建模与分析也有浓厚兴趣,关注数据随时间和空间变化的建模与理解。',
                 eduTitle: '教育背景',
-                eduContent: '<strong>福州大学</strong><br>软件工程 本科<br>2023 - 2027<br>福州，中国',
+                eduContent: '<strong>福州大学</strong><br>软件工程 本科<br>2023 - 2027<br>福州,中国',
                 researchTitle: '研究兴趣',
-                researchContent: '<ul><li>跨模态检索方法</li><li>多模态信息对齐（文本、图像、音频）</li><li>时空数据建模与分析</li><li>数据随时间和位置的变化</li></ul>',
+                researchContent: '<ul><li>跨模态检索方法</li><li>多模态信息对齐(文本、图像、音频)</li><li>时空数据建模与分析</li><li>数据随时间和位置的变化</li></ul>',
                 pubTitle: '发表论文',
-                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. (修改中)</p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. (审核中)</p>',
+                pubContent: '<p style="margin-bottom: 1rem;"><strong><u>Su, Y.</u></strong>, Zhu, D.*, Xiao, B., Li, S., Qu, T., Zhai, W., & Cheng, C. (2025). Geospatial Grid Management: A Comprehensive Framework and Systematic Review of Subdivision, Encoding, Indexing and Storage. <em>International Journal of Applied Earth Observation and Geoinformation</em>. </p><p><strong><u>Su, Y.</u></strong>, Zhu, D.*, Dong, Z., Lin, Q., Liu, L., & Bao, S. (2025). FAME: Fusion of Alignment and Multi-view Enhancement for Remote Sensing Image-Text Retrieval. <em>Transactions on Geoscience and Remote Sensing</em>. </p>',
                 achieveTitle: '比赛与成果',
-                achieveContent: '<ul><li>中国高校计算机大赛移动应用创新赛（华东赛区）二等奖，2024</li><li>第十四届海峡两岸信息服务创新大赛 暨福建省第十八届计算机软件设计大赛 三等奖，2024</li><li>第十六届中国大学生服务外包创新创业大赛（华东赛区）三等奖，2025</li><li>第十一届全国大学生统计建模大赛三等奖，2025</li><li>中国大学生计算机设计大赛二等奖，2025</li><li>软件著作权：怡伴APP1.0，登记号：2025SR0689058，2025</li></ul>',
+                achieveContent: '<ul><li>中国高校计算机大赛移动应用创新赛(华东赛区)二等奖,2024</li><li>第十四届海峡两岸信息服务创新大赛 暨福建省第十八届计算机软件设计大赛 三等奖,2024</li><li>第十六届中国大学生服务外包创新创业大赛(华东赛区)三等奖,2025</li><li>第十一届全国大学生统计建模大赛三等奖,2025</li><li>中国大学生计算机设计大赛二等奖,2025</li><li>软件著作权:怡伴APP1.0,登记号:2025SR0689058,2025</li></ul>',
                 internTitle: '实习经历',
                 internContent: '<strong>南威软件股份有限公司</strong><br>开发工程师实习生 | 2024.7 – 2024.8<br><br>为智慧将乐项目提供停车场余位更新接口及路外停车场入场记录、路内停车场入场记录、路外停车场出场记录、路内停车场出场记录等数据上报接口开发。',
                 skillLangTitle: '英语',
                 skillProgTitle: '编程',
                 skillSportTitle: '体育',
-                pdfText: '导出PDF'
+                pdfText: '下载简历'
             }
         };
 
@@ -966,6 +1025,7 @@
             currentLang = currentLang === 'en' ? 'zh' : 'en';
             const t = translations[currentLang];
             
+            // 切换文本内容
             document.getElementById('lang-text').textContent = t.langText;
             document.getElementById('logo').textContent = t.logo;
             document.getElementById('nav-about').textContent = t.navAbout;
@@ -991,6 +1051,17 @@
             document.getElementById('skill-prog-title').textContent = t.skillProgTitle;
             document.getElementById('skill-sport-title').textContent = t.skillSportTitle;
             document.getElementById('pdf-text').textContent = t.pdfText;
+            
+            // 切换中文行楷字体
+            const heroTitle = document.getElementById('hero-title');
+            const logo = document.getElementById('logo');
+            if (currentLang === 'zh') {
+                heroTitle.classList.add('chinese');
+                logo.classList.add('chinese');
+            } else {
+                heroTitle.classList.remove('chinese');
+                logo.classList.remove('chinese');
+            }
         }
 
         // 页面加载完成后初始化
@@ -1003,7 +1074,7 @@
                 new Typed('#motto', {
                     strings: [
                         "Losing Ground Now, Gaining Miles Tomorrow!",
-                        "不争一时先后，但求源源不绝。"
+                        "不争一时先后,但求源源不绝。"
                     ],
                     typeSpeed: 45,
                     backSpeed: 35,
